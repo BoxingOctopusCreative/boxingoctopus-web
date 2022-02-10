@@ -25,6 +25,26 @@ html, .body, .container {
   justify-content: flex-end;
 }
 
+.navbar-brand-logo {
+  width: 80px;
+  height: auto;
+}
+
+p {
+  font-size: 1.5em;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.404-img {
+  width: 100px;
+  height: auto;
+}
+
+.profile-pic {
+  width: 400px;
+  height: auto;
+}
+
 .nav-link {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
