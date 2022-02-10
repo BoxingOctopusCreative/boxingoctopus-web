@@ -1,0 +1,38 @@
+import React from 'react';
+import { Stack, Container, Row } from 'react-bootstrap';
+import { Outlet } from 'react-router-dom';
+import Title from './Title';
+import { Styles } from './Styles';
+import Navigation from './Navigation';
+import { Footer } from './Footer';
+
+
+export const Layout = () => {
+  return (
+    <>
+      <Title />
+      <Styles>
+        <div className="body">
+          <Stack gap={3}>
+            <Container fluid="xxl">
+              <Row>
+                <Navigation />
+              </Row>
+              <Row></Row>
+                <div className="vertical-center">
+                  <Row>
+                    <Outlet />
+                  </Row>
+                </div>
+            </Container>
+            <Container fluid="xxl">
+              <Row>
+                <Footer />
+              </Row>
+            </Container>
+          </Stack>
+        </div>
+      </Styles>
+    </>
+  );
+};
