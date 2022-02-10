@@ -6,15 +6,15 @@ export default class FourOhFour extends Component {
         return (
             <Container>
                 <Row>
-                    <img 
-                        className="404-img" 
-                        src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/272953166_10226322759166164_8214906071841110177_n.jpg" 
-                        alt="404" 
-                    />
-                </Row>
-                <Row>
                     <Col>
-                        <div className='text-splash'>404 Page Not Found</div>
+                        <div className='404-img'>
+                            <img  
+                                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/272953166_10226322759166164_8214906071841110177_n.jpg" 
+                                alt="404"
+                                width="520px"
+                            />
+                            <div className='text-splash'>404 Page Not Found</div>
+                        </div>
                     </Col>
                 </Row>
             </Container>

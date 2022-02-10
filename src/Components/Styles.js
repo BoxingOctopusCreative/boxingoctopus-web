@@ -36,6 +36,8 @@ p {
 }
 
 .404-img {
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: auto;
 }
