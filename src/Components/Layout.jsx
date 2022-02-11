@@ -24,11 +24,11 @@ export const Layout = () => {
                     <Outlet />
                   </Row>
                 </div>
-            </Container>
-            <Container fluid="xxl">
               <Row>
                 <Footer />
               </Row>
+            </Container>
+            <Container fluid="xxl">
             </Container>
           </Stack>
         </div>

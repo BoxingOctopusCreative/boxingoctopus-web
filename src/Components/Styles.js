@@ -35,6 +35,10 @@ p {
   font-family: 'Bebas Neue', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
 .404-img {
   justify-content: center;
   align-items: center;
@@ -43,6 +47,7 @@ p {
 }
 
 .profile-pic {
+  image-width: 20%;
   width: 400px;
   height: auto;
 }

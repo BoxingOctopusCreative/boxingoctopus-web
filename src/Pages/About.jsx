@@ -13,9 +13,9 @@ export default class About extends Component {
                 <Row>
                     <Col>
                         <img
-                            className="profile-pic" 
-                            src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/74535829_10162580416045083_3865245522998591488_o.jpg" 
+                            src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-about-me.jpg" 
                             alt="Ryan" 
+                            width="50%"
                         />
                     </Col>
                     <Col>
