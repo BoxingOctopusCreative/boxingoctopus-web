@@ -14,7 +14,17 @@ html, .body, .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 100px;
+}
+
+.project-list {
+  margin-bottom: 25px;
+}
+
+.project-list p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar {
@@ -78,7 +88,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-footer {
-  background-color: black;
   width: 50%;
   margin: 0 auto;
 }
