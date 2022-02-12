@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import FourOhFour from "./Pages/404";
+import Contact from './Pages/Contact';
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<FourOhFour />} />
         </Route>
       </Routes>

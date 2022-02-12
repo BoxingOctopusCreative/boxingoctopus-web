@@ -32,7 +32,7 @@ html, .body, .container {
   padding-top: 20px;
   padding-bottom: 100px;
   padding-right: 100px;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .navbar-brand-logo {

@@ -57,7 +57,7 @@ export default class Projects extends Component {
                         </a>
                     </Col>
                     <Col>
-                        <h3>Kürator</h3>
+                        <h3>Kürat[or]</h3>
                         <p className="project-list">
                             A web application built to help retro video game collectors track and manage their collections; built with React and Flask.
                         </p>
