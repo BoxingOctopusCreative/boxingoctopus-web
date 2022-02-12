@@ -83,7 +83,7 @@ export default class Contact extends Component {
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control as="textarea" rows={6} />
                             </Form.Group>
-                            <Button variant="primary" type="submit">
+                            <Button variant="secondary" type="submit">
                                 Submit
                             </Button>
                         </Col>
