@@ -5,11 +5,11 @@ const BoxingOctopusUrl = '<a href="https://boxingoctop.us" target="_blank" rel="
 const ReactUrl         = '<a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a>'
 
 export const Footer = () => (
-    <div className="fixed-bottom">
-        <footer className="page-footer font-small pt4">
-            <div className="footer-copyright text-center py-3">
-                Another fine {Parser(BoxingOctopusUrl)} Project | Built with {Parser(ReactUrl)} | Copyright © 2020 {Parser(BoxingOctopusUrl)}
-            </div>
-        </footer>
-    </div>
+  <div className="fixed-bottom">
+    <footer className="page-footer font-small pt4">
+      <div className="footer-copyright text-center py-3">
+        Another fine {Parser(BoxingOctopusUrl)} Project | Built with {Parser(ReactUrl)} | Copyright © 2020 {Parser(BoxingOctopusUrl)}
+      </div>
+    </footer>
+  </div>
 );
