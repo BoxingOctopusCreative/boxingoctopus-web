@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
 html, .body, .container {
-  background-color: black;
   color: white;
   width: 100%;
   height: 100%;
@@ -28,9 +27,10 @@ html, .body, .container {
 }
 
 .navbar {
+  background-color: black;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  width: 100%;
+  padding-top: 10px;
   padding-right: 100px;
   justify-content: center;
 }
@@ -88,7 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-footer {
-  width: 50%;
+  background-color: black;
+  width: 100%;
   margin: 0 auto;
 }
 

@@ -21,9 +21,9 @@ export default class Projects extends Component {
               />
             </a>
           </Col>
-          <Col>
+          <Col className="project-list">
             <h3>Ryan Draga's Nerd Emporium</h3>
-            <p className="project-list">
+            <p>
               My Personal Blog, featuring my work, my thoughts, and my life.
             </p>
           </Col>
@@ -38,9 +38,9 @@ export default class Projects extends Component {
               />
             </a>
           </Col>
-          <Col>
+          <Col className="project-list">
             <h3>My Life In Music</h3>
-            <p className="project-list">
+            <p>
               A project I started wherein I attempt to catalogue all the random music I get stuck in my head through Spotify.
             </p>
           </Col>
@@ -55,9 +55,9 @@ export default class Projects extends Component {
               />
             </a>
           </Col>
-          <Col>
+          <Col className="project-list">
             <h3>Chains Invent Insanity</h3>
-            <p className="project-list">
+            <p>
               A Cards Against Humanity Card Generator that uses Markov Chains to generate cards; built with React and Flask.
             </p>
           </Col>
@@ -72,9 +72,9 @@ export default class Projects extends Component {
               />
             </a>
           </Col>
-          <Col>
+          <Col className="project-list">
             <h3>Kürat[or]</h3>
-            <p className="project-list">
+            <p>
               A web application built to help retro video game collectors track and manage their collections; built with React and Flask.
             </p>
           </Col>
