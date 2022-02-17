@@ -14,7 +14,11 @@ export default class Projects extends Component {
         <Row className="project-list">
           <Col>
             <a href="https://ryandraga.me" target="_blank" rel="noreferrer">
-              <img src="https://ryandraga.me/content/images/2021/06/Banner-Logo-2.png" width="400px" alt="Ryan Draga's Nerd Emporium"/>
+              <img 
+                src="https://ryandraga.me/content/images/2021/06/Banner-Logo-2.png" 
+                width="400px" 
+                alt="Ryan Draga's Nerd Emporium"
+              />
             </a>
           </Col>
           <Col>
@@ -27,7 +31,11 @@ export default class Projects extends Component {
         <Row>
           <Col className="project-list">
             <a href="https://mylifeinmusic.me" target="_blank" rel="noreferrer">
-              <img src="https://mylifeinmusic.me/content/images/size/w600/2021/05/MLiM-Title.png" width="400px" alt="My Life In Music"/>
+              <img 
+                src="https://mylifeinmusic.me/content/images/size/w600/2021/05/MLiM-Title.png" 
+                width="400px" 
+                alt="My Life In Music"
+              />
             </a>
           </Col>
           <Col>
@@ -40,7 +48,11 @@ export default class Projects extends Component {
         <Row>
           <Col className="project-list">
             <a href="https://chainsinventinsanity.com" target="_blank" rel="noreferrer">
-              <img src="https://chains-invent-insanity-assets.sfo3.digitaloceanspaces.com/Logo%20Black.png" width="400px" alt="Chains Invent Insanity"/>
+              <img 
+                src="https://chains-invent-insanity-assets.sfo3.digitaloceanspaces.com/images/Logo%20Black.png" 
+                width="400px" 
+                alt="Chains Invent Insanity"
+              />
             </a>
           </Col>
           <Col>
@@ -53,7 +65,11 @@ export default class Projects extends Component {
         <Row>
           <Col className="project-list">
             <a href="https://kuratorapp.io" target="_blank" rel="noreferrer">
-              <img src="https://kurator-public-assets.nyc3.digitaloceanspaces.com/Logo-Black-Wide.png" width="400px" alt="Kürator"/>
+              <img 
+                src="https://kurator-public-assets.nyc3.digitaloceanspaces.com/Logo-Black-Wide.png" 
+                width="400px" 
+                alt="Kürator"
+              />
             </a>
           </Col>
           <Col>
