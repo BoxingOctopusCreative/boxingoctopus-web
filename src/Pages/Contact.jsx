@@ -4,9 +4,9 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
-const SERVICE_ID  = process.env.SERVICE_ID;
-const TEMPLATE_ID = process.env.TEMPLATE_ID;
-const USER_ID     = process.env.USER_ID;
+const SERVICE_ID  = process.env.EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
+const USER_ID     = process.env.EMAILJS_USER_ID;
 
 const handleOnSubmit = (e) => {
   e.preventDefault();
