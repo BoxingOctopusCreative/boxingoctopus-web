@@ -23,7 +23,6 @@ html, .body, .container {
 .project-list p {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .navbar {
@@ -68,6 +67,23 @@ h1, h2, h3, h4, h5, h6 {
   color: white !important;
   text-decoration: none;
   margin-left: 16px;
+}
+
+.form-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3em;
+}
+
+.form-control {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2em;
+  border-radius: 0em;
+}
+
+button {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2em;
+  border-radius: 0em;
 }
 
 .logo-splash {

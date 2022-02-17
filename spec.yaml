@@ -1,0 +1,37 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+domains:
+- domain: boxingoctop.us
+  type: PRIMARY
+  zone: boxingoctop.us
+envs:
+- key: EMAILJS_SERVICE_ID
+  scope: RUN_AND_BUILD_TIME
+  value: service_hk9bvsr
+- key: EMAILJS_TEMPLATE_ID
+  scope: RUN_AND_BUILD_TIME
+  value: template_qp8wa24
+- key: EMAILJS_USER_ID
+  scope: RUN_AND_BUILD_TIME
+  value: user_d6qOWLed9WrNBi0a8SARr
+- key: GA_PROPERTY_ID
+  scope: RUN_AND_BUILD_TIME
+  value: UA-117537755-1
+name: boxingoctopus-web
+region: tor
+services:
+- build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: TuxOtaku/boxingoctopus-web
+  http_port: 3000
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: boxingoctopus-web
+  routes:
+  - path: /
+  run_command: npm install -g serve; serve -s build
+  source_dir: /

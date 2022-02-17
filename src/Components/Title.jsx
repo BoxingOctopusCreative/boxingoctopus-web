@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 export default class Title extends Component {
   render() {
     return (
+      <HelmetProvider>
       <Helmet bodyAttributes={{style: 'background-color : #000000'}}>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +21,7 @@ export default class Title extends Component {
           crossorigin="anonymous"
         />
       </Helmet>
+      </HelmetProvider>
     );
   }
 };
