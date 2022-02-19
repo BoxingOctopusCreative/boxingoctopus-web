@@ -33,5 +33,5 @@ services:
   name: boxingoctopus-web
   routes:
   - path: /
-  run_command: npm install -g serve; serve -s build
+  run_command: npm install -g serve && serve -s build
   source_dir: /

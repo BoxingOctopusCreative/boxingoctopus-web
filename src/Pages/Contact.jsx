@@ -4,9 +4,9 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
-const SERVICE_ID  = process.env.EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
-const USER_ID     = process.env.EMAILJS_USER_ID;
+const SERVICE_ID  = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const USER_ID     = process.env.REACT_APP_EMAILJS_USER_ID;
 
 const handleOnSubmit = (e) => {
   e.preventDefault();
@@ -27,6 +27,10 @@ const handleOnSubmit = (e) => {
   });
   e.target.reset()
 };
+
+console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
+console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+console.log(process.env.REACT_APP_EMAILJS_USER_ID);
 
 export default class Contact extends Component {
   render() {

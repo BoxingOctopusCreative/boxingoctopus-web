@@ -5,8 +5,15 @@ import App from './App';
 import ReactGA from 'react-ga';
 import reportWebVitals from './reportWebVitals';
 
-ReactGA.initialize(process.env.GA_PROPERTY_ID);
+ReactGA.initialize(
+  process.env.REACT_APP_GA_PROPERTY_ID,{
+    gaOptions: {
+      cookieFlags: 'SameSite=None; Secure'
+    }
+  });
 ReactGA.pageview(window.location.pathname + window.location.search);
+
+console.log(process.env.REACT_APP_GA_PROPERTY_ID);
 
 ReactDOM.render(
   <React.StrictMode>
