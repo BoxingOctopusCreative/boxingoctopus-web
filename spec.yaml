@@ -6,16 +6,16 @@ domains:
   type: PRIMARY
   zone: boxingoctop.us
 envs:
-- key: EMAILJS_SERVICE_ID
+- key: REACT_APP_EMAILJS_SERVICE_ID
   scope: RUN_AND_BUILD_TIME
   value: service_hk9bvsr
-- key: EMAILJS_TEMPLATE_ID
+- key: REACT_APP_EMAILJS_TEMPLATE_ID
   scope: RUN_AND_BUILD_TIME
   value: template_qp8wa24
-- key: EMAILJS_USER_ID
+- key: REACT_APP_EMAILJS_USER_ID
   scope: RUN_AND_BUILD_TIME
   value: user_d6qOWLed9WrNBi0a8SARr
-- key: GA_PROPERTY_ID
+- key: REACT_APP_GA_PROPERTY_ID
   scope: RUN_AND_BUILD_TIME
   value: UA-117537755-1
 name: boxingoctopus-web

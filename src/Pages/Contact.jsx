@@ -28,10 +28,6 @@ const handleOnSubmit = (e) => {
   e.target.reset()
 };
 
-console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
-console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-console.log(process.env.REACT_APP_EMAILJS_USER_ID);
-
 export default class Contact extends Component {
   render() {
     return (
