@@ -13,8 +13,6 @@ ReactGA.initialize(
   });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-console.log(process.env.REACT_APP_GA_PROPERTY_ID);
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
