@@ -64,11 +64,19 @@ export default class Contact extends Component {
               <Col>
                 <Form.Group className="mb-3" controlId="form-input-control-email">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" name="user_email" />
+                  <Form.Control 
+                    type="email" 
+                    placeholder="Enter email" 
+                    name="from_email" 
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="form-input-control-first-name">
                   <Form.Label>Your Name</Form.Label>
-                  <Form.Control type="text" placeholder="Your Name" name="user_name" />
+                  <Form.Control 
+                    type="text" 
+                    placeholder="Your Name" 
+                    name="from_name" 
+                  />
                 </Form.Group>
               </Col>
               <Col>
