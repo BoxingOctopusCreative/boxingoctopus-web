@@ -1,7 +1,13 @@
 {
   "name": "boxingoctopus-web",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
+  "engines": {
+    "npm": ">=8.7.0"
+  },
+  "overrides": {
+    "react": "$react"
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
@@ -15,6 +21,7 @@
     "emailjs-com": "^3.2.0",
     "fontawesome": "^5.6.3",
     "html-react-parser": "^1.4.4",
+    "logrocket": "^3.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",
     "react-dom": "^17.0.2",

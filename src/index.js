@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import ReactGA from 'react-ga';
 import reportWebVitals from './reportWebVitals';
+import LogRocket from 'logrocket';
+
+LogRocket.init('6mr8rr/boxing-octopus-creative');
 
 ReactGA.initialize(
   process.env.REACT_APP_GA_PROPERTY_ID,{
