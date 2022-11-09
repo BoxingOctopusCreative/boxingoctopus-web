@@ -20,7 +20,6 @@ export default class Title extends Component {
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossorigin="anonymous"
         />
-        <a rel="me" href="https://mastodon.social/@boxingoctopus">Mastodon</a>
       </Helmet>
       </HelmetProvider>
     );

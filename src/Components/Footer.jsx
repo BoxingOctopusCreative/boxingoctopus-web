@@ -12,6 +12,7 @@ export const Footer = () => (
       <div className="footer-copyright text-center py-3">
         Another fine {Parser(BoxingOctopusUrl)} Project | Built with {Parser(ReactUrl)} | Copyright © {date} {Parser(BoxingOctopusUrl)}
       </div>
+      <a rel="me" href="https://mastodon.social/@boxingoctopus">Mastodon</a>
     </footer>
   </div>
 );
