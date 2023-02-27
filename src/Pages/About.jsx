@@ -13,7 +13,7 @@ export default class About extends Component {
       <Row>
           <Col>
             <img
-              src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-about-me.jpg" 
+              src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-about-me-2.jpg" 
               alt="Ryan" 
               width="50%"
             />
