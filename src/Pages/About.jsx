@@ -12,11 +12,13 @@ export default class About extends Component {
       </Row>
       <Row>
           <Col>
-            <img className='profile-pic'
-              src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-square.jpg" 
-              alt="Ryan" 
-              width="50%"
-            />
+            <div className='pfp-container'>
+              <img className='profile-pic'
+                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-square.jpg" 
+                alt="Ryan" 
+                width="50%"
+              />
+            </div>
           </Col>
           <Col>
             <p>

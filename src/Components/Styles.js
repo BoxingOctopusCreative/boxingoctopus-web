@@ -16,6 +16,12 @@ html, .body, .container {
   margin-top: 100px;
 }
 
+.pfp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .project-list {
   margin-bottom: 25px;
 }
