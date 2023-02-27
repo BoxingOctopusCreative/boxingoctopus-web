@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   image-width: 20%;
   width: 400px;
   height: auto;
+  radius: 50%;
 }
 
 .nav-link {
