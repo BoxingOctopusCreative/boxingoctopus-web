@@ -21,9 +21,9 @@ export default class FourOhFour extends Component {
             </div>
           </Col>
           <Col>
-            <p>
+            <div className='text-splash' style={{ marginTop: "100px" }}>
               Oh No, You seem to have taken a wrong turn.
-            </p>
+            </div>
           </Col>
         </Row>
       </Container>
