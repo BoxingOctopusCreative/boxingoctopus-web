@@ -9,7 +9,7 @@ export default class About extends Component {
           <Col>
             <div className='text-splash' style={{ marginBottom: "50px" }}>About</div>
           </Col>
-      </Row>
+        </Row>
       <Row>
           <Col>
             <div className='pfp-container'>

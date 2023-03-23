@@ -4,6 +4,7 @@ import { Layout } from './Components/Layout';
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
+import Collective from "./Pages/Collective";
 import FourOhFour from "./Pages/404";
 import Contact from './Pages/Contact';
 
@@ -16,6 +17,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="collective" element={<Collective />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<FourOhFour />} />
         </Route>

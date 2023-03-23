@@ -68,6 +68,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 100%;
 }
 
+.collective-logo {
+  image-width: 20%;
+  width: 400px;
+  height: auto;
+}
+
 .nav-link {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 36px;
