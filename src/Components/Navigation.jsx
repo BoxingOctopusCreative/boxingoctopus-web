@@ -25,7 +25,6 @@ export default class Navigation extends Component {
                     <Nav.Link href="/collective">Collective</Nav.Link>
                     <Nav.Link href="/contact">Contact</Nav.Link>
                     <Nav.Link href="https://github.com/boxingoctopus" target="_blank" rel="noreferrer">Github</Nav.Link>
-                    <Nav.Link href="http://tee.pub/lic/boxingoctopuscreative" target="_blank" rel="noreferrer">Merch</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>

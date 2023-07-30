@@ -47,6 +47,23 @@ export default class Projects extends Component {
         </Row>
         <Row>
           <Col className="project-list">
+            <a href="https://hipsterdonut.myspreadshop.ca" target="_blank" rel="noreferrer">
+              <img 
+                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/hipsterdonut-logo-wide.png" 
+                width="400px" 
+                alt="Hipster Donut Apparel"
+              />
+            </a>
+          </Col>
+          <Col className="project-list">
+            <h3>Hipster Donut Apparel</h3>
+            <p>
+              I get bored and doodle in Illustrator a lot. Sometimes I put those doodles on t-shirts and sell them. Why not buy one?
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="project-list">
             <a href="https://chainsinventinsanity.com" target="_blank" rel="noreferrer">
               <img 
                 src="https://chains-invent-insanity-assets.sfo3.digitaloceanspaces.com/images/Logo%20Black.png" 
