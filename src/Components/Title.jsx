@@ -12,7 +12,7 @@ export default class Title extends Component {
         <meta name="description" content="Boxing Octopus Creative" />
         <title>Boxing Octopus Creative</title>
         <link rel="canonical" href="https://boxingoctop.us" />
-        <link rel="icon" href="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/Logo%20White.png" />
+        <link rel="icon" href="https://assets.boxingoctop.us/Logo%20White.png" />
         <style>@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');</style> 
         <link
           rel="stylesheet"

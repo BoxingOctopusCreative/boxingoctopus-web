@@ -14,7 +14,7 @@ export default class About extends Component {
           <Col>
             <div className='pfp-container'>
               <img className='profile-pic'
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ryan-square.jpg" 
+                src="https://assets.boxingoctop.us/img/ryan-square.jpg" 
                 alt="Ryan" 
                 width="50%"
               />

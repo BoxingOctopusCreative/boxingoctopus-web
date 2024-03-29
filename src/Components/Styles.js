@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Styles = styled.div`
 html, .body, .container {
   color: white;
+  background-color: #000000;
   width: 100%;
   height: 100%;
   margin: 0;

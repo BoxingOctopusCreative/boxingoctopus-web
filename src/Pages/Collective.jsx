@@ -14,7 +14,7 @@ export default class Collective extends Component {
           <Col>
             <div className='pfp-container'>
               <img className='collective-logo'
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img%2Fcollective-logo.png" 
+                src="https://assets.boxingoctop.us/img%2Fcollective-logo.png" 
                 alt="Ryan" 
                 width="50%"
               />

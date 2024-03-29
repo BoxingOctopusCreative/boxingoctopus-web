@@ -14,7 +14,7 @@ export default class FourOhFour extends Component {
           <Col>
             <div className='pfp-container'>
               <img className='collective-logo'
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/eeby-deeby-404.jpg" 
+                src="https://assets.boxingoctop.us/img/eeby-deeby-404.jpg" 
                 alt="Ryan" 
                 width="50%"
               />

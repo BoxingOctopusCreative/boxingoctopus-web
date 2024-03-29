@@ -8,7 +8,7 @@ export default class Home extends Component {
         <Col>
           <img 
             className="logo-splash" 
-            src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/Logo%20White.png" 
+            src="https://assets.boxingoctop.us/img/Logo%20White.png" 
             alt="logo" 
             style={{ marginTop: "100px" }}
           />

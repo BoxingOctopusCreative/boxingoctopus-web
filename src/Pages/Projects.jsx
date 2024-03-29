@@ -49,7 +49,7 @@ export default class Projects extends Component {
           <Col className="project-list">
             <a href="https://hipsterdonut.myspreadshop.ca" target="_blank" rel="noreferrer">
               <img 
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/hipsterdonut-logo-wide.png" 
+                src="https://assets.boxingoctop.us/img/hipsterdonut-logo-wide.png" 
                 width="400px" 
                 alt="Hipster Donut Apparel"
               />

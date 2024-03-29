@@ -12,7 +12,7 @@ export default class Navigation extends Component {
               <Container>
                 <Navbar.Brand href="/">
                   <img 
-                    src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/Logo%20White.png" 
+                    src="https://assets.boxingoctop.us/img/Logo%20White.png" 
                     className='navbar-brand-logo' 
                     alt="Boxing Octopus" 
                   />

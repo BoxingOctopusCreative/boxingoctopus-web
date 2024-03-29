@@ -43,13 +43,13 @@ export default class Contact extends Component {
               If you have any questions, comments, or concerns, please feel free to reach out to me on social media.
               <br />
               <img 
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/icon_twitter.png"
+                src="https://assets.boxingoctop.us/icons/icon_twitter.png"
                 alt="Boxing Octopus Creative on Twitter"
                 width="5%"
                 style={{ marginRight: "20px" }}
               />
               <img 
-                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/icons/icon_facebook.png" 
+                src="https://assets.boxingoctop.us/icons/icon_facebook.png" 
                 alt="Boxing Octopus Creative on Twitter" 
                 width="5%" 
                 style={{ marginRight: "20px" }}

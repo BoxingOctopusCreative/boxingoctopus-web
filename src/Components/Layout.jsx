@@ -29,6 +29,9 @@ export const Layout = () => {
               </Row>
             </Container>
             <Container fluid="xxl">
+              <Row>
+                <Footer />
+              </Row>
             </Container>
           </Stack>
         </div>
