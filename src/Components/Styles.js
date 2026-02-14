@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 400px;
   height: auto;
   border-radius: 100%;
+  filter: grayscale(100%);
 }
 
 .collective-logo {
