@@ -10,8 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "node_modules/.bin/jest",
+    "test:watch": "node_modules/.bin/jest --watch"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
