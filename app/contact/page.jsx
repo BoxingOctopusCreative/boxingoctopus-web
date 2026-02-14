@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -21,7 +21,7 @@ export default function Contact() {
       });
       return;
     }
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, { publicKey: USER_ID }).then(
       () => {
         Swal.fire({
           icon: 'success',
