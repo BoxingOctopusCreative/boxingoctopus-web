@@ -7,7 +7,7 @@ export default function About() {
           <img
             src="https://assets.boxingoctop.us/img/ryan-square.jpg"
             alt="Ryan"
-            className="w-[400px] h-auto rounded-full grayscale"
+            className="w-[400px] h-auto rounded-full grayscale contrast-150"
           />
         </div>
         <div className="font-bebas text-2xl">

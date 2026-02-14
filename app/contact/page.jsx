@@ -51,21 +51,21 @@ export default function Contact() {
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg"
                 alt="Ryan Draga on Bluesky"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale"
+                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 brightness-200"
               />
             </a>
             <a href="https://www.linkedin.com/in/ryandraga" target="_blank" rel="noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
                 alt="Ryan Draga on LinkedIn"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale"
+                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 invert"
               />
             </a>
             <a href="https://hey.cafe/@boxingoctopus" target="_blank" rel="noreferrer">
               <img
                 src="https://assets.heycafecdn.com/logos/svg/logo_round_transparent_purple.svg?cache=wqn4mia5vlfugr4"
                 alt="Ryan Draga on Hey.Café"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale"
+                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 invert"
               />
             </a>
             <br /><br />
