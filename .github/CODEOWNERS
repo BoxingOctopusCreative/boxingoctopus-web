@@ -1,0 +1,9 @@
+# CODEOWNERS - default owners for the entire repo
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+* @boxingoctopus
+
+# Optional: assign specific owners to paths
+# /app/            @boxingoctopus/frontend
+# /.github/        @boxingoctopus/devops
+# /__tests__/     @boxingoctopus/frontend
