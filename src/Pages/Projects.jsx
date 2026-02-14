@@ -15,7 +15,7 @@ export default class Projects extends Component {
           <Col>
             <a href="https://ryandraga.me" target="_blank" rel="noreferrer">
               <img 
-                src="https://ryandraga.me/content/images/2021/06/Banner-Logo-2.png" 
+                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/nerd-emporium-banner-logo.png" 
                 width="400px" 
                 alt="Ryan Draga's Nerd Emporium"
               />
@@ -32,7 +32,7 @@ export default class Projects extends Component {
           <Col className="project-list">
             <a href="https://mylifeinmusic.me" target="_blank" rel="noreferrer">
               <img 
-                src="https://mylifeinmusic.me/content/images/size/w600/2021/05/MLiM-Title.png" 
+                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/mlim-circular-logo.png" 
                 width="400px" 
                 alt="My Life In Music"
               />
@@ -66,7 +66,7 @@ export default class Projects extends Component {
           <Col className="project-list">
             <a href="https://chainsinventinsanity.com" target="_blank" rel="noreferrer">
               <img 
-                src="https://chains-invent-insanity-assets.sfo3.digitaloceanspaces.com/images/Logo%20Black.png" 
+                src="https://boxingoctopus-assets.nyc3.digitaloceanspaces.com/img/ci2-logo-black.png" 
                 width="400px" 
                 alt="Chains Invent Insanity"
               />
@@ -79,7 +79,7 @@ export default class Projects extends Component {
             </p>
           </Col>
         </Row>
-        <Row>
+{/*        <Row>
           <Col className="project-list">
             <a href="https://kuratorapp.io" target="_blank" rel="noreferrer">
               <img 
@@ -95,7 +95,7 @@ export default class Projects extends Component {
               A web application built to help retro video game collectors track and manage their collections; built with React and Flask.
             </p>
           </Col>
-        </Row>
+        </Row>*/}
       </Container>
     );
   };
