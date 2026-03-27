@@ -12,9 +12,10 @@ function initGA() {
     return;
   }
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args) {
+  function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   }
+  window.gtag = gtag;
   window.gtag('js', new Date());
   gtag('config', id, { cookie_flags: 'SameSite=None; Secure' });
 }

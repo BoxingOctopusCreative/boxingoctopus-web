@@ -1,5 +1,6 @@
 'use client';
 
+import type { FormEvent } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
@@ -9,9 +10,9 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
 export default function Contact() {
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!SERVICE_ID || !TEMPLATE_ID || !USER_ID) {
       Swal.fire({
@@ -21,15 +22,16 @@ export default function Contact() {
       });
       return;
     }
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, { publicKey: USER_ID }).then(
+    const form = e.currentTarget;
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, { publicKey: USER_ID }).then(
       () => {
         Swal.fire({
           icon: 'success',
           title: 'Message Sent Successfully',
         });
-        e.target.reset();
+        form.reset();
       },
-      (error) => {
+      (error: { text?: string }) => {
         Swal.fire({
           icon: 'error',
           title: 'Oops, something went wrong',
@@ -41,9 +43,9 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto">
-      <div className="font-bebas text-[90px] leading-none mb-12">Contact</div>
+      <div className="boc-page-title">Contact</div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="font-bebas text-2xl">
+        <div className="boc-page-content">
           <p>
             If you have any questions, comments, or concerns, please feel free to reach out to me on social media.
             <br />
@@ -68,7 +70,8 @@ export default function Contact() {
                 className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 invert"
               />
             </a>
-            <br /><br />
+            <br />
+            <br />
             Additionally, feel free to contact me via email through the form on this page.
           </p>
         </div>
@@ -104,7 +107,7 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
-              rows={6}
+              rows={5}
               className="w-full font-bebas text-lg px-3 py-2 rounded-none border border-gray-600 bg-black text-white resize-y"
             />
           </div>

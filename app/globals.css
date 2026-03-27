@@ -4,6 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --boc-gray-interactive: #6B7280;
+}
+
+@layer components {
+  .boc-page-title {
+    @apply font-bebas text-7xl leading-none mb-2;
+  }
+
+  .boc-page-content {
+    @apply font-bebas text-2xl;
+  }
+
+  .boc-social-icon {
+    @apply w-[5%] min-w-[32px] inline mr-5 grayscale
+  }
+
+}
+
 html,
 body {
   @apply bg-black text-white min-h-full m-0;
@@ -11,4 +30,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover,
+a:active {
+  color: var(--boc-gray-interactive);
 }

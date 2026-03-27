@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import Home from '@/app/page';
@@ -7,16 +7,87 @@ import Projects from '@/app/projects/page';
 import Collective from '@/app/collective/page';
 import Contact from '@/app/contact/page';
 import NotFound from '@/app/not-found';
+import { sanityClient, isSanityConfigured } from '@/lib/sanity.client';
+
+jest.mock('@/lib/sanity.client', () => ({
+  sanityClient: {
+    fetch: jest.fn(),
+  },
+  isSanityConfigured: jest.fn(),
+}));
+
+jest.mock('@/lib/sanity.image', () => ({
+  urlForImage: jest.fn(() => ({
+    width: jest.fn().mockReturnThis(),
+    auto: jest.fn().mockReturnThis(),
+    url: jest.fn(() => 'https://cdn.sanity.io/images/test/image.png'),
+  })),
+}));
 
 const VALID_INTERNAL_PATHS = ['/', '/about', '/projects', '/collective', '/contact'];
 
-function getAllLinks(container) {
-  return Array.from(container.querySelectorAll('a[href]'));
+function getAllLinks(container: HTMLElement): HTMLAnchorElement[] {
+  return Array.from(container.querySelectorAll<HTMLAnchorElement>('a[href]'));
 }
 
-function getLinkHrefs(container) {
-  return getAllLinks(container).map((a) => a.getAttribute('href').trim());
+function getLinkHrefs(container: HTMLElement): string[] {
+  return getAllLinks(container).map((a) => (a.getAttribute('href') ?? '').trim());
 }
+
+const mockProjects = [
+  {
+    _id: 'project-1',
+    projectTitle: { text: "Ryan Draga's Nerd Emporium", url: 'https://ryandraga.me' },
+    projectDescription: [],
+    projectImage: {
+      asset: { _type: 'image' },
+      alt: "Ryan Draga's Nerd Emporium",
+      url: 'https://ryandraga.me',
+    },
+  },
+  {
+    _id: 'project-2',
+    projectTitle: { text: 'My Life In Music', url: 'https://mylifeinmusic.me' },
+    projectDescription: [],
+    projectImage: {
+      asset: { _type: 'image' },
+      alt: 'My Life In Music',
+      url: 'https://mylifeinmusic.me',
+    },
+  },
+  {
+    _id: 'project-3',
+    projectTitle: { text: 'Hipster Donut Apparel', url: 'https://hipsterdonut.myspreadshop.ca' },
+    projectDescription: [],
+    projectImage: {
+      asset: { _type: 'image' },
+      alt: 'Hipster Donut Apparel',
+      url: 'https://hipsterdonut.myspreadshop.ca',
+    },
+  },
+  {
+    _id: 'project-4',
+    projectTitle: { text: 'Chains Invent Insanity', url: 'https://chainsinventinsanity.com' },
+    projectDescription: [],
+    projectImage: {
+      asset: { _type: 'image' },
+      alt: 'Chains Invent Insanity',
+      url: 'https://chainsinventinsanity.com',
+    },
+  },
+];
+
+const mockIsSanityConfigured = isSanityConfigured as jest.MockedFunction<typeof isSanityConfigured>;
+const mockFetch = sanityClient.fetch as jest.MockedFunction<typeof sanityClient.fetch>;
+
+beforeEach(() => {
+  mockIsSanityConfigured.mockReturnValue(true);
+  mockFetch.mockResolvedValue(mockProjects);
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
 
 describe('All links have valid hrefs', () => {
   it('Navigation links have valid hrefs', () => {
@@ -43,10 +114,10 @@ describe('All links have valid hrefs', () => {
     });
   });
 
-  it('Projects page project links have valid hrefs', () => {
-    const { container } = render(<Projects />);
+  it('Projects page project links have valid hrefs', async () => {
+    const { container } = render(await Projects());
     const hrefs = getLinkHrefs(container);
-    expect(hrefs.length).toBe(4);
+    expect(hrefs.length).toBe(8);
     hrefs.forEach((href) => {
       expect(href).toBeTruthy();
       expect(href).toMatch(/^https?:\/\//);
@@ -108,8 +179,8 @@ describe('All expected links are present and resolve to correct targets', () => 
     expect(hrefs).toContain('https://tailwindcss.com');
   });
 
-  it('Projects page links resolve to expected project URLs', () => {
-    const { container } = render(<Projects />);
+  it('Projects page links resolve to expected project URLs', async () => {
+    const { container } = render(await Projects());
     const hrefs = getLinkHrefs(container);
     expect(hrefs).toContain('https://ryandraga.me');
     expect(hrefs).toContain('https://mylifeinmusic.me');

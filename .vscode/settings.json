@@ -4,6 +4,9 @@
         "Swal",
         "sweetalert"
     ],
+    "css.lint.unknownAtRules": "ignore",
+    "scss.lint.unknownAtRules": "ignore",
+    "less.lint.unknownAtRules": "ignore",
     "yaml.schemas": {
         "Kubernetes": "*.yaml",
         "Ansible": "*.yml",

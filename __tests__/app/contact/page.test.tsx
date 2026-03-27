@@ -7,14 +7,14 @@ const mockSwalFire = jest.fn();
 jest.mock('@emailjs/browser', () => ({
   __esModule: true,
   default: {
-    sendForm: (...args) => mockSendForm(...args),
+    sendForm: (...args: unknown[]) => mockSendForm(...args),
   },
 }));
 
 jest.mock('sweetalert2', () => ({
   __esModule: true,
   default: {
-    fire: (...args) => mockSwalFire(...args),
+    fire: (...args: unknown[]) => mockSwalFire(...args),
   },
 }));
 
@@ -82,7 +82,7 @@ describe('Contact page', () => {
       fireEvent.change(messageInput, { target: { value: 'Hello!' } });
 
       const form = emailInput.closest('form');
-      fireEvent.submit(form);
+      fireEvent.submit(form!);
 
       await Promise.resolve();
       await Promise.resolve();
@@ -110,7 +110,7 @@ describe('Contact page', () => {
       render(<Contact />);
 
       const form = screen.getByLabelText(/email address/i).closest('form');
-      fireEvent.submit(form);
+      fireEvent.submit(form!);
 
       await Promise.resolve();
       await Promise.resolve();

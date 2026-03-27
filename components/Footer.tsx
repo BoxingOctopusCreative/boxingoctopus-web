@@ -2,7 +2,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-10 bg-black w-full py-4">
+    <footer className="fixed bottom-0 left-0 right-0 z-10 bg-black w-full py-4 border-t-2 border-gray-500">
       <div className="text-center font-bebas text-2xl text-white">
         Another fine{' '}
         <a

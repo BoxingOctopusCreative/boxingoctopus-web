@@ -1,6 +1,6 @@
+import type { ReactNode } from 'react';
 import { Analytics } from './Analytics';
-import { Navigation } from '@/components/Navigation';
-import { Footer } from '@/components/Footer';
+import { AppChrome } from '@/components/AppChrome';
 import './globals.css';
 
 export const viewport = {
@@ -19,7 +19,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="bg-black">
       <head>
@@ -41,13 +41,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-black text-white min-h-screen flex flex-col">
         <Analytics />
-        <Navigation />
-        <main className="flex-1 flex justify-center items-center mt-[100px] px-4 pb-24">
-          <div className="w-full max-w-7xl mx-auto">
-            {children}
-          </div>
-        </main>
-        <Footer />
+        <AppChrome>{children}</AppChrome>
       </body>
     </html>
   );
