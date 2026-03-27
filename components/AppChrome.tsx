@@ -16,7 +16,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
   return (
     <>
       <Navigation />
-      <main className="flex-1 flex justify-center items-start px-4 pt-8 pb-16 md:pb-20">
+      <main className="flex-1 flex justify-center items-start px-4 pt-8 pb-28 md:pb-24">
         <div className="w-full max-w-7xl mx-auto">{children}</div>
       </main>
       <Footer />

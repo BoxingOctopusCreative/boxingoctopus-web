@@ -30,7 +30,7 @@ export default function Collective() {
             height={500}
             allowtransparency="true"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            className="rounded-lg border-0"
+            className="w-full max-w-[350px] h-[500px] rounded-lg border-0"
           />
         </div>
       </div>

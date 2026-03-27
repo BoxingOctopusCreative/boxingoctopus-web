@@ -72,7 +72,7 @@ export default async function Projects() {
               />
             </a>
             <div>
-              <h3 className="font-bebas text-4xl mb-2">
+              <h3 className="font-bebas text-4xl mb-2 max-md:portrait:hidden">
                 <a href={project.projectTitle.url} target="_blank" rel="noreferrer">
                   {project.projectTitle.text}
                 </a>

@@ -10,11 +10,11 @@
 
 @layer components {
   .boc-page-title {
-    @apply font-bebas text-7xl leading-none mb-2;
+    @apply font-bebas text-5xl sm:text-6xl md:text-7xl leading-none mb-2;
   }
 
   .boc-page-content {
-    @apply font-bebas text-2xl;
+    @apply font-bebas text-xl md:text-2xl;
   }
 
   .boc-social-icon {
