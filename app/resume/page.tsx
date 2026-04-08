@@ -133,7 +133,7 @@ export default async function Resume() {
                   Responsibilities / Achievements:
                 </div>
               </div>
-              <div className="font-sofia_sans_condensed font-bold text-xl mb-2">
+              <div className="boc-page-content text-xl mb-2">
                 <PortableText
                   value={job.jobDescription}
                   components={jobDescriptionComponents}

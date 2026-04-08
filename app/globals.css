@@ -14,7 +14,16 @@
   }
 
   .boc-page-content {
-    @apply font-bebas text-xl md:text-2xl;
+    @apply font-sofia_sans_condensed font-bold text-xl md:text-2xl;
+  }
+
+  /* Portable Text: block paragraphs need spacing (preflight zeros p margins). */
+  .boc-page-content p {
+    margin-bottom: 1em;
+  }
+
+  .boc-page-content p:last-child {
+    margin-bottom: 0;
   }
 
   /* Portable Text / CMS lists: square bullets (Tailwind preflight resets list-style). */

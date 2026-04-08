@@ -54,6 +54,7 @@ export default function Contact() {
           <p>
             If you have any questions, comments, or concerns, please feel free to reach out to me on social media.
             <br />
+            <br />
             <a href="https://bsky.app/profile/boxingoctopus.social" target="_blank" rel="noreferrer">
               <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg"
@@ -81,9 +82,27 @@ export default function Contact() {
                 className="boc-social-icon contrast-200 invert"
               />
             </a>
+            <a href="https://fiverr.com/s/kLB7BDw" target="_blank" rel="noreferrer">
+              <Image
+                src="https://assets.boxingoctop.us/icons/fiverr_logo.svg"
+                alt="Ryan Draga on Fiverr"
+                width={32}
+                height={32}
+                className="boc-social-icon contrast-200 brightness-200"
+              />
+            </a>
+            <a href="https://github.com/boxingoctopuscreative" target="_blank" rel="noreferrer">
+              <Image
+                src="https://assets.boxingoctop.us/icons/GitHub_Invertocat_Black.svg"
+                alt="Ryan Draga on GitHub"
+                width={32}
+                height={32}
+                className="boc-social-icon invert contrast-200 brightness-200"
+              />
+            </a>
             <br />
             <br />
-            Additionally, feel free to contact me via email through the form on this page.
+            Additionally, if you&apos;d like to contact me regarding freelance work outside of Fiverr, feel free to do so via the form on this page.
           </p>
         </div>
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">

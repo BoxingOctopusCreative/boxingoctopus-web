@@ -1,28 +1,31 @@
 import { render, screen } from '@testing-library/react';
-import About from '@/app/about/page';
+import { isSanityConfigured } from '@/lib/sanity.client';
+
+jest.mock('@/lib/sanity.client', () => ({
+  sanityClient: {
+    fetch: jest.fn().mockResolvedValue(null),
+  },
+  isSanityConfigured: jest.fn(),
+}));
+
+const mockIsConfigured = isSanityConfigured as jest.MockedFunction<typeof isSanityConfigured>;
 
 describe('About page', () => {
-  it('renders the About title', () => {
-    render(<About />);
+  beforeEach(() => {
+    mockIsConfigured.mockReturnValue(false);
+  });
+
+  it('renders the About title', async () => {
+    const { default: About } = await import('@/app/about/page');
+    const ui = await About();
+    render(ui);
     expect(screen.getByText('About')).toBeInTheDocument();
   });
 
-  it('renders the profile image with correct alt text', () => {
-    render(<About />);
-    const img = screen.getByRole('img', { name: /ryan/i });
-    expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute('alt', 'Ryan');
-  });
-
-  it('profile image has correct src', () => {
-    render(<About />);
-    const img = screen.getByRole('img', { name: /ryan/i });
-    expect(img).toHaveAttribute('src', 'https://assets.boxingoctop.us/img/ryan-square.jpg');
-  });
-
-  it('renders the bio text', () => {
-    render(<About />);
-    expect(screen.getByText(/my name is ryan draga/i)).toBeInTheDocument();
-    expect(screen.getByText(/boxing octopus creative/i)).toBeInTheDocument();
+  it('shows environment message when Sanity is not configured', async () => {
+    const { default: About } = await import('@/app/about/page');
+    const ui = await About();
+    render(ui);
+    expect(screen.getByText(/NEXT_PUBLIC_SANITY_PROJECT_ID/i)).toBeInTheDocument();
   });
 });

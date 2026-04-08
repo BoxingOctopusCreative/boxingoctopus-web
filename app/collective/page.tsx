@@ -14,7 +14,7 @@ export default function Collective() {
             className="w-full max-w-md items-center h-auto"
           />
         </div>
-        <div className="boc-page-content">
+        <div className="boc-page-content font-sofia_sans_condensed font-bold text-2xl text-justify mb-2">
           <p>
             One of my great passions in life is not only learning, but mentoring and passing on knowledge to others.
             <br />

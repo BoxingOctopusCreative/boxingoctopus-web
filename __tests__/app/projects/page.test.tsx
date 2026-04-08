@@ -9,14 +9,6 @@ jest.mock('@/lib/sanity.client', () => ({
   isSanityConfigured: jest.fn(),
 }));
 
-jest.mock('@/lib/sanity.image', () => ({
-  urlForImage: jest.fn(() => ({
-    width: jest.fn().mockReturnThis(),
-    auto: jest.fn().mockReturnThis(),
-    url: jest.fn(() => 'https://cdn.sanity.io/images/test/image.png'),
-  })),
-}));
-
 const mockProjects = [
   {
     _id: 'project-1',

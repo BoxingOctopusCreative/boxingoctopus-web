@@ -5,7 +5,7 @@ describe('Home page', () => {
   it('renders the main tagline', () => {
     render(<Home />);
     expect(
-      screen.getByText(/boxing octopus creative is a toronto-based digital content brand with many tentacles/i)
+      screen.getByText(/boxing octopus creative is a many-armed digital content brand from toronto/i)
     ).toBeInTheDocument();
   });
 

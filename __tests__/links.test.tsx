@@ -16,15 +16,7 @@ jest.mock('@/lib/sanity.client', () => ({
   isSanityConfigured: jest.fn(),
 }));
 
-jest.mock('@/lib/sanity.image', () => ({
-  urlForImage: jest.fn(() => ({
-    width: jest.fn().mockReturnThis(),
-    auto: jest.fn().mockReturnThis(),
-    url: jest.fn(() => 'https://cdn.sanity.io/images/test/image.png'),
-  })),
-}));
-
-const VALID_INTERNAL_PATHS = ['/', '/about', '/projects', '/collective', '/contact'];
+const VALID_INTERNAL_PATHS = ['/', '/about', '/projects', '/resume', '/collective', '/contact'];
 
 function getAllLinks(container: HTMLElement): HTMLAnchorElement[] {
   return Array.from(container.querySelectorAll<HTMLAnchorElement>('a[href]'));
@@ -98,6 +90,8 @@ describe('All links have valid hrefs', () => {
       expect(href).toBeTruthy();
       if (href.startsWith('/')) {
         expect(VALID_INTERNAL_PATHS).toContain(href);
+      } else if (href.startsWith('mailto:')) {
+        expect(href).toMatch(/^mailto:/);
       } else {
         expect(href).toMatch(/^https?:\/\//);
       }
@@ -140,8 +134,10 @@ describe('All links have valid hrefs', () => {
     expect(links.length).toBe(0);
   });
 
-  it('About page has no links in content', () => {
-    const { container } = render(<About />);
+  it('About page has no links in content', async () => {
+    mockIsSanityConfigured.mockReturnValue(false);
+    const ui = await About();
+    const { container } = render(ui);
     const links = getAllLinks(container);
     expect(links.length).toBe(0);
   });
@@ -166,9 +162,15 @@ describe('All expected links are present and resolve to correct targets', () => 
     expect(hrefs).toContain('/');
     expect(hrefs).toContain('/about');
     expect(hrefs).toContain('/projects');
+    expect(hrefs).toContain('/resume');
     expect(hrefs).toContain('/collective');
     expect(hrefs).toContain('/contact');
     expect(hrefs).toContain('https://github.com/boxingoctopus');
+    expect(hrefs).toContain('https://www.fiverr.com/s/kLB7BDw');
+    expect(hrefs).toContain('https://www.linkedin.com/in/ryandraga');
+    expect(hrefs).toContain('https://bsky.app/profile/boxingoctopus.social');
+    expect(hrefs).toContain('https://hey.cafe/@boxingoctopus');
+    expect(hrefs).toContain('mailto:info@boxingoctop.us');
   });
 
   it('Footer contains expected external links', () => {

@@ -29,3 +29,16 @@ jest.mock('next-sanity', () => ({
   groq: (strings: TemplateStringsArray, ...values: string[]) =>
     strings.reduce((out, str, i) => out + str + (values[i] ?? ''), ''),
 }));
+
+/** Avoid loading @sanity/image-url (ESM) in Jest; support width/height/auto chains used by pages. */
+jest.mock('@/lib/sanity.image', () => ({
+  urlForImage: jest.fn(() => {
+    const chain = {
+      width: jest.fn().mockReturnThis(),
+      height: jest.fn().mockReturnThis(),
+      auto: jest.fn().mockReturnThis(),
+      url: jest.fn(() => 'https://cdn.sanity.io/images/test/image.png'),
+    };
+    return chain;
+  }),
+}));

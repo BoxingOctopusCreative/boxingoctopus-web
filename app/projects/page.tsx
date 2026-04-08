@@ -77,7 +77,7 @@ export default async function Projects() {
                   {project.projectTitle.text}
                 </a>
               </h3>
-              <div className="boc-page-content font-sofia_sans_condensed font-bold text-xl mb-2">
+              <div className="boc-page-content text-xl mb-2">
                 <PortableText value={project.projectDescription} />
               </div>
             </div>
