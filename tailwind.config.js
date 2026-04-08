@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bebas: ['"Bebas Neue"', 'sans-serif'],
+        bebas: ['var(--font-bebas)', 'sans-serif'],
+        sofia_sans_condensed: ['var(--font-sofia-sans-condensed)', 'sans-serif'],
+      },
+      listStyleType: {
+        square: 'square',
       },
     },
   },

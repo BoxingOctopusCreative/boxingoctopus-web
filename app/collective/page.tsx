@@ -1,13 +1,17 @@
+import Image from 'next/image';
+
 export default function Collective() {
   return (
     <div className="container mx-auto">
       <div className="boc-page-title">Collective</div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         <div className="flex justify-center items-center">
-          <img
+          <Image
             src="https://assets.boxingoctop.us/img%2Fcollective-logo.png"
             alt="Collective logo"
-            className="w-[400px] max-w-full h-auto"
+            width={400}
+            height={400}
+            className="w-full max-w-md items-center h-auto"
           />
         </div>
         <div className="boc-page-content">

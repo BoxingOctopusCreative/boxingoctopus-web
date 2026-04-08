@@ -1,7 +1,22 @@
 import type { ReactNode } from 'react';
+import { Bebas_Neue, Sofia_Sans_Condensed } from 'next/font/google';
 import { Analytics } from './Analytics';
 import { AppChrome } from '@/components/AppChrome';
 import './globals.css';
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
+  display: 'swap',
+});
+
+const sofiaSansCondensed = Sofia_Sans_Condensed({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-sofia-sans-condensed',
+  display: 'swap',
+});
 
 export const viewport = {
   themeColor: '#000000',
@@ -21,14 +36,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en" className={`bg-black ${bebasNeue.variable} ${sofiaSansCondensed.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-          rel="stylesheet"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

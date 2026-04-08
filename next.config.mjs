@@ -11,6 +11,8 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "cdn.sanity.io" },
       { protocol: "https", hostname: "assets.boxingoctop.us" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "assets.heycafecdn.com" },
     ],
   },
   // Prefer this repo when multiple lockfiles exist (e.g. parent workspace)

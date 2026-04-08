@@ -72,12 +72,12 @@ export default async function Projects() {
               />
             </a>
             <div>
-              <h3 className="font-bebas text-4xl mb-2 max-md:portrait:hidden">
+              <h3 className="font-bebas text-4xl mb-2 max-md:portrait:hidden border-b-2 border-r-2 border-gray-500 w-fit max-w-full pl-2 pr-10">
                 <a href={project.projectTitle.url} target="_blank" rel="noreferrer">
                   {project.projectTitle.text}
                 </a>
               </h3>
-              <div className="boc-page-content">
+              <div className="boc-page-content font-sofia_sans_condensed font-bold text-xl mb-2">
                 <PortableText value={project.projectDescription} />
               </div>
             </div>

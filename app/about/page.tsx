@@ -1,12 +1,16 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <div className="container mx-auto">
       <div className="boc-page-title">About</div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center items-center">
-          <img
+          <Image
             src="https://assets.boxingoctop.us/img/ryan-square.jpg"
             alt="Ryan"
+            width={512}
+            height={512}
             className="w-full max-w-md items-center h-auto rounded-full grayscale contrast-150"
           />
         </div>

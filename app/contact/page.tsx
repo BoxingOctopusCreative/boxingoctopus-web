@@ -1,7 +1,7 @@
 'use client';
 
-import type { FormEvent } from 'react';
 import { useRef } from 'react';
+import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
@@ -12,7 +12,12 @@ const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  type SubmitEventLike = {
+    preventDefault: () => void;
+    currentTarget: HTMLFormElement;
+  };
+
+  const handleSubmit = (e: SubmitEventLike) => {
     e.preventDefault();
     if (!SERVICE_ID || !TEMPLATE_ID || !USER_ID) {
       Swal.fire({
@@ -50,24 +55,30 @@ export default function Contact() {
             If you have any questions, comments, or concerns, please feel free to reach out to me on social media.
             <br />
             <a href="https://bsky.app/profile/boxingoctopus.social" target="_blank" rel="noreferrer">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg"
                 alt="Ryan Draga on Bluesky"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 brightness-200"
+                width={32}
+                height={32}
+                className="boc-social-icon contrast-200 brightness-200"
               />
             </a>
             <a href="https://www.linkedin.com/in/ryandraga" target="_blank" rel="noreferrer">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
                 alt="Ryan Draga on LinkedIn"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 invert"
+                width={32}
+                height={32}
+                className="boc-social-icon contrast-200 invert"
               />
             </a>
             <a href="https://hey.cafe/@boxingoctopus" target="_blank" rel="noreferrer">
-              <img
+              <Image
                 src="https://assets.heycafecdn.com/logos/svg/logo_round_transparent_purple.svg?cache=wqn4mia5vlfugr4"
                 alt="Ryan Draga on Hey.Café"
-                className="w-[5%] min-w-[32px] inline mr-5 grayscale contrast-200 invert"
+                width={32}
+                height={32}
+                className="boc-social-icon contrast-200 invert"
               />
             </a>
             <br />

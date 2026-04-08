@@ -12,6 +12,7 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
+    { href: '/resume', label: 'Resume' },
     { href: '/collective', label: 'Collective' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -79,6 +80,14 @@ export function Navigation() {
           >
             Github
           </a>
+          <a
+            href="https://www.fiverr.com/s/kLB7BDw"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white no-underline transition-colors hover:text-gray-300 active:text-gray-300"
+          >
+            Fiverr
+          </a>
         </div>
       </div>
       {isMobileMenuOpen ? (
@@ -97,6 +106,14 @@ export function Navigation() {
             >
               Github
             </a>
+            <a
+            href="https://www.fiverr.com/s/kLB7BDw"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white no-underline transition-colors hover:text-gray-300 active:text-gray-300"
+          >
+            Fiverr
+          </a>
           </div>
         </div>
       ) : null}
