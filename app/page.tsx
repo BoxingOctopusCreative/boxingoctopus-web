@@ -13,7 +13,7 @@ export default function Home() {
         />
       </div>
       <div className="flex justify-end items-center font-bebas text-5xl sm:text-6xl lg:text-[90px] leading-none mt-6 md:mt-0 text-left md:text-right">
-        Boxing Octopus Creative is a Toronto-Based Digital Content Brand With Many Tentacles
+        Boxing Octopus Creative is a Many-Armed Digital Content Brand from Toronto
       </div>
     </div>
   );
